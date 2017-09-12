@@ -1,6 +1,9 @@
-#!/usr/bin/env python3
+from __future__ import print_function
 import argparse
 import sys
+import matplotlib
+matplotlib.use('Agg')
+# flake8: noqa
 import matplotlib.pyplot as plt
 import pandas as pd
 

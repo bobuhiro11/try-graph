@@ -3,7 +3,6 @@
 ## Usage
 
 ```bash
-$ cat examples/in1.csv | \
-  python3 ./try-graph/main.py --xlabel distance --ylabel speed --title in1 \
-  > in1.png
+$ pip install git+https://github.com/bobuhiro11/try-graph.git
+$ cat examples/in1.csv | try-graph > in1.png
 ```

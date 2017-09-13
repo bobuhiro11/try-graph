@@ -6,8 +6,8 @@ matplotlib.use('Agg')
 # flake8: noqa
 import matplotlib.pyplot as plt
 import pandas as pd
+import try_graph
 
-VERSION="1.0"
 
 def main():
     parser = argparse.ArgumentParser(description='Try a graph')
@@ -41,7 +41,7 @@ def main():
     args = parser.parse_args()
 
     if args.version:
-        print("try-graph " + VERSION)
+        print("try-graph " + try_graph.VERSION)
         return
 
     df = pd.read_csv(args.input, index_col=0)

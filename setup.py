@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-import try_graph.main as t
+import try_graph as t
 
 with open('requirements.txt') as f:
     req = [p.strip() for p in f.readlines()]

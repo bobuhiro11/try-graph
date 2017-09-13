@@ -7,6 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 
+VERSION="1.0"
 
 def main():
     parser = argparse.ArgumentParser(description='Try a graph')
@@ -29,12 +30,19 @@ def main():
     parser.add_argument('--debug',
                         action='store_true',
                         help='print debug messages to stderr')
+    parser.add_argument('--version',
+                        action='store_true',
+                        help='print version')
     parser.add_argument('--kind',
                         default='bar',
                         choices=['bar', 'hist', 'box', 'kde',
                                  'area', 'scatter', 'hexbin', 'pie'],
                         help='graph type')
     args = parser.parse_args()
+
+    if args.version:
+        print("try-graph " + VERSION)
+        return
 
     df = pd.read_csv(args.input, index_col=0)
     df.plot()

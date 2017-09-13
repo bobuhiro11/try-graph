@@ -1,10 +1,11 @@
 from setuptools import setup, find_packages
+import try_graph.main as t
 
 with open('requirements.txt') as f:
     req = [p.strip() for p in f.readlines()]
 
 setup(name='try-graph',
-      version='1.0',
+      version=t.VERSION,
       description='CLI tool for creating a graph',
       author='bobuhiro11',
       install_requires=req,
